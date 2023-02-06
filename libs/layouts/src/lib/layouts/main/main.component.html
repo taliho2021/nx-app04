@@ -272,9 +272,10 @@
 
           <mat-card-content>
             <mat-form-field
-              class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              class="border-solid block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Client ID</mat-label>
               <input
                 matInput
                 placeholder="Client ID"
@@ -286,6 +287,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Company Name</mat-label>
               <input
                 matInput
                 placeholder="Company name"
@@ -302,6 +304,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Address Line 1</mat-label>
               <input
                 matInput
                 placeholder="Address Line 1"
@@ -314,19 +317,22 @@
               </mat-error>
             </mat-form-field>
 
-            <button
-              mat-button
-              type="button"
-              (click)="hasUnitNumber = !hasUnitNumber"
-            >
-              + Add C/O, Apt, Suite, Unit
-            </button>
+            <div class="row" *ngIf="!hasUnitNumber">
+              <button
+                mat-button
+                type="button"
+                (click)="hasUnitNumber = !hasUnitNumber"
+              >
+                + Add C/O, Apt, Suite, Unit
+              </button>
+            </div>
 
             <div class="row" *ngIf="hasUnitNumber">
               <mat-form-field
                 class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 appearance="fill"
               >
+                <mat-label>Address Line 2</mat-label>
                 <textarea
                   matInput
                   placeholder="Address 2"
@@ -339,6 +345,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>City</mat-label>
               <input matInput placeholder="City" formControlName="city" />
               <mat-error
                 *ngIf="importerForm.controls['city'].hasError('required')"
@@ -351,6 +358,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>State</mat-label>
               <mat-select placeholder="State" formControlName="state">
               </mat-select>
               <mat-error
@@ -364,6 +372,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Zip Code</mat-label>
               <input
                 matInput
                 #postalCode
@@ -379,6 +388,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Country</mat-label>
               <input
                 matInput
                 placeholder="Country Name"
@@ -391,6 +401,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Phone 1</mat-label>
               <input
                 matInput
                 placeholder="Telephone #"
@@ -403,6 +414,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Email 1</mat-label>
               <input
                 matInput
                 placeholder="EMail"
@@ -415,6 +427,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Website Addr:</mat-label>
               <input
                 matInput
                 placeholder="Website"
@@ -857,7 +870,7 @@
     </form>
   </mat-tab>
 
-  <mat-tab color="warn">
+  <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
       Third
@@ -1128,12 +1141,12 @@
           <mat-card-header class="text-lg font-medium leading-6 text-gray-900">
             <mat-card-title>Other Information</mat-card-title>
           </mat-card-header>
-
-          <mat-card-content>
+<mat-card-content>
             <mat-form-field
-              class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              class="border-solid block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Client ID</mat-label>
               <input
                 matInput
                 placeholder="Client ID"
@@ -1145,6 +1158,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Company Name</mat-label>
               <input
                 matInput
                 placeholder="Company name"
@@ -1161,6 +1175,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Address Line 1</mat-label>
               <input
                 matInput
                 placeholder="Address Line 1"
@@ -1173,19 +1188,22 @@
               </mat-error>
             </mat-form-field>
 
-            <button
-              mat-button
-              type="button"
-              (click)="hasUnitNumber = !hasUnitNumber"
-            >
-              + Add C/O, Apt, Suite, Unit
-            </button>
+            <div class="row" *ngIf="!hasUnitNumber">
+              <button
+                mat-button
+                type="button"
+                (click)="hasUnitNumber = !hasUnitNumber"
+              >
+                + Add C/O, Apt, Suite, Unit
+              </button>
+            </div>
 
             <div class="row" *ngIf="hasUnitNumber">
               <mat-form-field
                 class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 appearance="fill"
               >
+                <mat-label>Address Line 2</mat-label>
                 <textarea
                   matInput
                   placeholder="Address 2"
@@ -1198,6 +1216,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>City</mat-label>
               <input matInput placeholder="City" formControlName="city" />
               <mat-error
                 *ngIf="importerForm.controls['city'].hasError('required')"
@@ -1210,6 +1229,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>State</mat-label>
               <mat-select placeholder="State" formControlName="state">
               </mat-select>
               <mat-error
@@ -1223,6 +1243,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Zip Code</mat-label>
               <input
                 matInput
                 #postalCode
@@ -1238,6 +1259,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Country</mat-label>
               <input
                 matInput
                 placeholder="Country Name"
@@ -1250,6 +1272,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Phone 1</mat-label>
               <input
                 matInput
                 placeholder="Telephone #"
@@ -1262,6 +1285,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Email 1</mat-label>
               <input
                 matInput
                 placeholder="EMail"
@@ -1274,6 +1298,7 @@
               class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               appearance="fill"
             >
+              <mat-label>Website Addr:</mat-label>
               <input
                 matInput
                 placeholder="Website"
@@ -1282,408 +1307,13 @@
               />
             </mat-form-field>
           </mat-card-content>
+
         </mat-card>
       </div>
     </form>
   </mat-tab>
 </mat-tab-group>
 
-<form
-  [formGroup]="importerForm"
-  novalidate
-  (ngSubmit)="onSubmit()"
-  class="flex bg-slate-200 items-stretch container mx-auto"
->
-  <div class="grid grid-cols-3 gap-4">
-    <mat-card>
-      <mat-card-header class="text-lg font-medium leading-6 text-gray-900">
-        <mat-card-title>Address Information</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-form-field
-          class="border-solid block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Client ID</mat-label>
-          <input matInput placeholder="Client ID" formControlName="clientId" />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Company Name</mat-label>
-          <input matInput placeholder="Company name" formControlName="name" />
-          <mat-error *ngIf="importerForm.controls['name'].hasError('required')">
-            Company name is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Address Line 1</mat-label>
-          <input
-            matInput
-            placeholder="Address Line 1"
-            formControlName="address1"
-          />
-          <mat-error
-            *ngIf="importerForm.controls['address1'].hasError('required')"
-          >
-            Address Line 1 is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <div class="row" *ngIf="!hasUnitNumber">
-          <button
-            mat-button
-            type="button"
-            (click)="hasUnitNumber = !hasUnitNumber"
-          >
-            + Add C/O, Apt, Suite, Unit
-          </button>
-        </div>
-
-        <div class="row" *ngIf="hasUnitNumber">
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Address Line 2</mat-label>
-            <textarea
-              matInput
-              placeholder="Address 2"
-              formControlName="address2"
-            ></textarea>
-          </mat-form-field>
-        </div>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>City</mat-label>
-          <input matInput placeholder="City" formControlName="city" />
-          <mat-error *ngIf="importerForm.controls['city'].hasError('required')">
-            City is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>State</mat-label>
-          <mat-select placeholder="State" formControlName="state"> </mat-select>
-          <mat-error
-            *ngIf="importerForm.controls['state'].hasError('required')"
-          >
-            State is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Zip Code</mat-label>
-          <input
-            matInput
-            #postalCode
-            maxlength="5"
-            placeholder="Postal Code"
-            type="number"
-            formControlName="postalCode"
-          />
-          <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Country</mat-label>
-          <input
-            matInput
-            placeholder="Country Name"
-            type="text"
-            formControlName="country"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Phone 1</mat-label>
-          <input
-            matInput
-            placeholder="Telephone #"
-            type="number"
-            formControlName="phone1"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Email 1</mat-label>
-          <input
-            matInput
-            placeholder="EMail"
-            type="email"
-            formControlName="email"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-label>Website Addr:</mat-label>
-          <input
-            matInput
-            placeholder="Website"
-            type="text"
-            formControlName="website"
-          />
-        </mat-form-field>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-header class="text-lg font-medium leading-6 text-gray-900">
-        <mat-card-title>Tax & Bond Information</mat-card-title>
-      </mat-card-header>
-
-      <mat-card-content>
-        <div formGroupName="bond">
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Effective Date</mat-label>
-            <input
-              matInput
-              placeholder="Effective Date"
-              formControlName="effectiveDate"
-            />
-          </mat-form-field>
-
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Bond No.</mat-label>
-            <input
-              matInput
-              placeholder="Bond Number"
-              formControlName="bondNo"
-            />
-          </mat-form-field>
-
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Amount of bond</mat-label>
-            <input
-              matInput
-              placeholder="Bond Amount"
-              formControlName="amount"
-            />
-          </mat-form-field>
-
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Surety Code</mat-label>
-            <input
-              matInput
-              placeholder="Surety Code"
-              formControlName="suretyCode"
-            />
-          </mat-form-field>
-
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Port Filed</mat-label>
-            <input
-              matInput
-              placeholder="Port Filed"
-              formControlName="portFiled"
-            />
-          </mat-form-field>
-
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <mat-label>Bond Holder Name</mat-label>
-            <input
-              matInput
-              placeholder="Bond Holder Name"
-              formControlName="holderName"
-            />
-          </mat-form-field>
-        </div>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-header class="text-lg font-medium leading-6 text-gray-900">
-        <mat-card-title>Other Information</mat-card-title>
-      </mat-card-header>
-
-      <mat-card-content>
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input matInput placeholder="Client ID" formControlName="clientId" />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input matInput placeholder="Company name" formControlName="name" />
-          <mat-error *ngIf="importerForm.controls['name'].hasError('required')">
-            Company name is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            placeholder="Address Line 1"
-            formControlName="address1"
-          />
-          <mat-error
-            *ngIf="importerForm.controls['address1'].hasError('required')"
-          >
-            Address Line 1 is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <button
-          mat-button
-          type="button"
-          (click)="hasUnitNumber = !hasUnitNumber"
-        >
-          + Add C/O, Apt, Suite, Unit
-        </button>
-
-        <div class="row" *ngIf="hasUnitNumber">
-          <mat-form-field
-            class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            appearance="fill"
-          >
-            <textarea
-              matInput
-              placeholder="Address 2"
-              formControlName="address2"
-            ></textarea>
-          </mat-form-field>
-        </div>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input matInput placeholder="City" formControlName="city" />
-          <mat-error *ngIf="importerForm.controls['city'].hasError('required')">
-            City is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <mat-select placeholder="State" formControlName="state"> </mat-select>
-          <mat-error
-            *ngIf="importerForm.controls['state'].hasError('required')"
-          >
-            State is <strong>required</strong>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            #postalCode
-            maxlength="5"
-            placeholder="Postal Code"
-            type="number"
-            formControlName="postalCode"
-          />
-          <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            placeholder="Country Name"
-            type="text"
-            formControlName="country"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            placeholder="Telephone #"
-            type="number"
-            formControlName="phone1"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            placeholder="EMail"
-            type="email"
-            formControlName="email"
-          />
-        </mat-form-field>
-
-        <mat-form-field
-          class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          appearance="fill"
-        >
-          <input
-            matInput
-            placeholder="Website"
-            type="text"
-            formControlName="website"
-          />
-        </mat-form-field>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</form>
 
 <p class="flex container mx-auto">
   Form Value: {{ importerForm.value | json }}

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-app04/layouts": ["libs/layouts/src/index.ts"]
+      "@nx-app04/layouts": ["libs/layouts/src/index.ts"],
+      "@nx-app04/parties": ["libs/parties/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
