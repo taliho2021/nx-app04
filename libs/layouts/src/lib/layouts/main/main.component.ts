@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
@@ -43,7 +42,6 @@ export interface Importer {
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
