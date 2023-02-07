@@ -16,6 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@nx-app04/layouts": ["libs/layouts/src/index.ts"],
+      "@nx-app04/operations": ["libs/operations/src/index.ts"],
+      "@nx-app04/operations/src/lib/air-ams": [
+        "libs/operations/src/lib/air-ams/src/index.ts"
+      ],
       "@nx-app04/parties": ["libs/parties/src/index.ts"]
     }
   },
