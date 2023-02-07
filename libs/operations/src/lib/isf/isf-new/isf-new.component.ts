@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'nx-app04-carriers',
+  selector: 'nx-app04-isf-new',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './carriers.component.html',
-  styleUrls: ['./carriers.component.scss'],
+  templateUrl: './isf-new.component.html',
+  styleUrls: ['./isf-new.component.scss'],
 })
-export class CarriersComponent {}
+export class IsfNewComponent {}

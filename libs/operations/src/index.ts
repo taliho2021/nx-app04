@@ -63,3 +63,11 @@ export * from './lib/truck-ams/truck-ams-detail/truck-ams-detail.component';
 export * from './lib/truck-ams/truck-ams-grid/truck-ams-grid.component';
 
 export * from './lib/truck-ams/truck-ams-home/truck-ams-home.component';
+
+export * from './lib/isf/isf-dashboard/isf-dashboard.component';
+
+export * from './lib/isf/isf-detail/isf-detail.component';
+
+export * from './lib/isf/isf-new/isf-new.component';
+
+export * from './lib/isf/isf-grid/isf-grid.component';

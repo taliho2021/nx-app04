@@ -8,6 +8,7 @@ import { oceanexportRoutes } from './ocean-export/ocean-export-routes';
 import { oceanimportRoutes } from './ocean-import/ocean-import-routes';
 import { seaamsRoutes } from './sea-ams/sea-ams-routes';
 import { truckamsRoutes } from './truck-ams/truck-ams-routes';
+import { isfRoutes } from './isf/isf-routes';
 
 export const operationsRoutes: Route[] = [
   { path: '', component: OperationsComponent },
@@ -15,6 +16,7 @@ export const operationsRoutes: Route[] = [
   { path: 'air-export', children: airexportRoutes },
   { path: 'air-import', children: airimportRoutes },
   { path: 'customs-brokerage', children: customsbrokerageRoutes },
+  { path: 'isf', children: isfRoutes},
   { path: 'ocean-export', children: oceanexportRoutes },
   { path: 'ocean-import', children: oceanimportRoutes },
   { path: 'sea-ams', children: seaamsRoutes },

@@ -1,0 +1,16 @@
+<h1 class="my-8 text-center text-6xl font-bold">
+  <span class="text-teal-500">ISF</span>
+  <span class="text-red-600"> Summary</span> Tables
+</h1>
+
+<ag-grid-angular
+  style="width: auto; height: 700px"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [pagination]="true"
+  [paginationPageSize]="10"
+  [animateRows]="true"
+  [sideBar]="true"
+>
+</ag-grid-angular>
