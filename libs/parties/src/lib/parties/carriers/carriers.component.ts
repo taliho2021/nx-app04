@@ -15,19 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 
-export interface Importer {
-  clientId: string;
-  name: string;
-  address1: string;
-  address2: string;
-  city: string;
-  state: string;
-  country: string;
-  phone1: number;
-  phone2: number;
-  website: string;
-  email1: string;
-}
+import { Importer } from '../interfaces/importer';
 
 @Component({
   selector: 'nx-app04-carriers',
