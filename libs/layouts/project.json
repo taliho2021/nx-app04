@@ -20,6 +20,13 @@
           "tsConfig": "libs/layouts/tsconfig.lib.json"
         }
       },
+
+      "assets":    {
+                      "input": "libs/shared/assets/images",
+                      "glob": "**/*",
+                      "output": "assets"
+      },
+
       "defaultConfiguration": "production"
     },
     "test": {
