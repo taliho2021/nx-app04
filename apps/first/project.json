@@ -15,7 +15,13 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/first/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/first/src/favicon.ico", "apps/first/src/assets"],
+        "assets": ["apps/first/src/favicon.ico",
+                    "apps/first/src/assets",
+                    {
+                      "input": "libs/shared/assets/images",
+                      "glob": "**/*",
+                      "output": "assets"
+                    }],
         "styles": ["apps/first/src/styles.scss"],
         "scripts": []
       },

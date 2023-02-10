@@ -20,7 +20,8 @@
       "@nx-app04/operations/src/lib/air-ams": [
         "libs/operations/src/lib/air-ams/src/index.ts"
       ],
-      "@nx-app04/parties": ["libs/parties/src/index.ts"]
+      "@nx-app04/parties": ["libs/parties/src/index.ts"],
+      "@nx-app04/shared/assets": ["libs/shared/assets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
