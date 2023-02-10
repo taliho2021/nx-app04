@@ -1,9 +1,10 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { Component } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
-import { TopbarComponent } from '@nx-app04/layouts';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
+import { TopbarComponent } from '@nx-app04/layouts';
 
 @Component({
   selector: 'nx-app04-parties',
